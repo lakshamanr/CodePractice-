@@ -1,0 +1,26 @@
+Delegate is an object using which one object can invoke the funcationality of other object without knowing 
+its class name and Method Name. 
+
+Example 
+
+Class A - in the DLL 
+{
+}
+
+Class B
+{
+	A a ;
+}
+
+But we want to invoke the class object of B  from A. 
+
+Take way a points are 
+
+-- Delegate declarations : 
+							1.We used use delegate type, to delcalre te deletegates 
+							2.We should initalize the delegate becofore its usese
+							3.User should declare the delete which should match with type of sinature mehod in terms of method aurguments and return type. 
+							4.
+				
+-- Delegate are like function pointers 
+-- Delegate type type

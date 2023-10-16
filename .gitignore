@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CodeParacties/.vs/CodeParacties/FileContentIndex/5423f948-0a04-48b7-a1d9-932cc0e8c407.vsidx
+/CodeParacties/.vs/CodeParacties/FileContentIndex/960cda47-6631-45a9-a556-7c4eb5015c43.vsidx
+/CodeParacties/.vs/CodeParacties/FileContentIndex/a0a09c92-4fc2-4e8b-9f70-492c08750cef.vsidx
+/CodeParacties/.vs/CodeParacties/FileContentIndex/cae3bd5f-028b-4467-8380-9423d6ccc55a.vsidx
+/CodeParacties/ChatAppWithDelegates/obj/Debug
+/CodeParacties/.vs/CodeParacties/v17/.suo
+/CodeParacties/ChatAppWithDelegates/bin/Debug
+/CodeParacties/ChatAppWithDelegates/Properties

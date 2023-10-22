@@ -23,5 +23,9 @@ namespace ChatAppWithDelegates
             chatForm.Show();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

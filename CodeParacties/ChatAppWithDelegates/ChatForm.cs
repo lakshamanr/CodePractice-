@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ChatAppWithDelegates
@@ -19,12 +13,11 @@ namespace ChatAppWithDelegates
 
         private void ChatForm_Load(object sender, EventArgs e)
         {
-            BroadCastMessageHandler lobjCast = ReceiveMessage;
-            _chatCoordinator.Register(lobjCast);
+            _chatCoordinator.RecivedMessage += ReceiveMessage;
         }
         private void ReceiveMessage(string astrMessage)
         {
-            txtMessageBord.Text += astrMessage+"\r\t";
+            txtMessageBord.Text += astrMessage + Environment.NewLine;
         }
 
         private void btnSend_Click(object sender, EventArgs e)

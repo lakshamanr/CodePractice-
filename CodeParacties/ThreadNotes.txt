@@ -1,0 +1,9 @@
+Thread , Process 
+---------------------------------------------------------------
+ 
+=> Process : Process is nothing but the running instance of the application(Application contains data and instructions). 
+
+=> Thread  : The path of execution of instructions within a process is called a thread.
+---------------------------------------------------------------
+
+Thread Safty manager =>  Monitor, Mutex, Semaphore,Events

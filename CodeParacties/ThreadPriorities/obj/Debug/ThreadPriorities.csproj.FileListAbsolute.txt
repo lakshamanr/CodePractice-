@@ -1,0 +1,6 @@
+C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadPriorities\bin\Debug\ThreadPriorities.exe
+C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadPriorities\bin\Debug\ThreadPriorities.pdb
+C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadPriorities\obj\Debug\ThreadPriorities.csproj.AssemblyReference.cache
+C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadPriorities\obj\Debug\ThreadPriorities.csproj.CoreCompileInputs.cache
+C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadPriorities\obj\Debug\ThreadPriorities.exe
+C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadPriorities\obj\Debug\ThreadPriorities.pdb

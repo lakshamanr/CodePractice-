@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{EA191DB6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsDemoApp", "ThreadsDemoApp\ThreadsDemoApp.csproj", "{87B1429F-6985-4172-B6B9-BBEB38565F17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPriorities", "ThreadPriorities\ThreadPriorities.csproj", "{F347BB06-E5A7-43CD-B53B-76D992E5F1B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{87B1429F-6985-4172-B6B9-BBEB38565F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B1429F-6985-4172-B6B9-BBEB38565F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B1429F-6985-4172-B6B9-BBEB38565F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F347BB06-E5A7-43CD-B53B-76D992E5F1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F347BB06-E5A7-43CD-B53B-76D992E5F1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F347BB06-E5A7-43CD-B53B-76D992E5F1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F347BB06-E5A7-43CD-B53B-76D992E5F1B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{5142B930-D2D6-4E37-8CAF-02740C72586F} = {501AF03A-8AB0-4905-AF49-F5812ADC4E19}
 		{EA191DB6-29F4-4BE4-8942-5F89413F628D} = {A638699B-85CB-4BB5-83D9-9AA751CFDC6D}
 		{87B1429F-6985-4172-B6B9-BBEB38565F17} = {A638699B-85CB-4BB5-83D9-9AA751CFDC6D}
+		{F347BB06-E5A7-43CD-B53B-76D992E5F1B4} = {A638699B-85CB-4BB5-83D9-9AA751CFDC6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA86F041-BFAA-4DBF-9834-FE1A9063EBB3}

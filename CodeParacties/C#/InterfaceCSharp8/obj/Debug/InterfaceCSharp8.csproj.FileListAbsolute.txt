@@ -1,7 +1,0 @@
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\obj\Debug\InterfaceCSharp8.csproj.AssemblyReference.cache
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\obj\Debug\InterfaceCSharp8.csproj.CoreCompileInputs.cache
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\bin\Debug\InterfaceCSharp8.exe.config
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\bin\Debug\InterfaceCSharp8.exe
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\bin\Debug\InterfaceCSharp8.pdb
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\obj\Debug\InterfaceCSharp8.exe
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\InterfaceCSharp8\obj\Debug\InterfaceCSharp8.pdb

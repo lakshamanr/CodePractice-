@@ -1,7 +1,0 @@
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\bin\Debug\Abstrtact.exe.config
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\bin\Debug\Abstrtact.exe
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\bin\Debug\Abstrtact.pdb
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\obj\Debug\Abstrtact.csproj.AssemblyReference.cache
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\obj\Debug\Abstrtact.csproj.CoreCompileInputs.cache
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\obj\Debug\Abstrtact.exe
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\Abstrtact\obj\Debug\Abstrtact.pdb

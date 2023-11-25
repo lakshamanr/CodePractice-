@@ -1,6 +1,0 @@
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadsDemoApp\bin\Debug\ThreadsDemoApp.exe
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadsDemoApp\bin\Debug\ThreadsDemoApp.pdb
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadsDemoApp\obj\Debug\ThreadsDemoApp.csproj.AssemblyReference.cache
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadsDemoApp\obj\Debug\ThreadsDemoApp.csproj.CoreCompileInputs.cache
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadsDemoApp\obj\Debug\ThreadsDemoApp.exe
-C:\Users\lakshaman.rokade\source\lakshamanr\CodePractice\CodeParacties\ThreadsDemoApp\obj\Debug\ThreadsDemoApp.pdb

@@ -6,5 +6,12 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome @Model.time</h1>
+    <br/>
+    <h1 class="display-4">Message : @Model.Message</h1> 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<form method="post">
+    <input type="text" asp-for="Message" />
+    <input type="submit" name="Submit"/>
+</form>

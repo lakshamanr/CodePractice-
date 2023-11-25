@@ -1,0 +1,18 @@
+﻿@page
+@model RazorApplication.Pages.PersonModel
+@{
+}
+
+<hr/>
+<br/>
+@Model.objPerson.Name
+@Model.objPerson.Email
+@Model.objPerson.Phone
+@Model.objPerson.Address
+<form method="post">
+    <input type="text" value="@Model.objPerson.Name"/>
+    <input type="text" value="@Model.objPerson.Email" />
+    <input type="text" value="@Model.objPerson.Phone" />
+    <input type="text" value="@Model.objPerson.Address" />
+    <input type="submit" value="Submit"/>
+</form>

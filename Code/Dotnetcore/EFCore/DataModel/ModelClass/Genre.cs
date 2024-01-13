@@ -10,6 +10,6 @@ namespace DataModel.ModelClass
     {
         public int GenreID { get; set; }
         public string GenreName{ get; set; }
-        public int Display{ get; set; }
+        public int DisplayOrder{ get; set; }
     }
 }

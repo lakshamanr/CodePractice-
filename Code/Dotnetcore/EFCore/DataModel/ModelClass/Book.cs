@@ -12,7 +12,7 @@ namespace DataModel.ModelClass
         [Key] 
 
         public int BookID{ get; set; }
-        public string Title { get; set; }
+        public string BookTitle { get; set; }
         public string ISBN { get; set; }
         public decimal Price { get; set; }
     }

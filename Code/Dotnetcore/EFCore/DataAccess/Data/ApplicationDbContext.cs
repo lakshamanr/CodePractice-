@@ -21,6 +21,11 @@ namespace DataAccess.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);
+             
+            List<Book> listOfBooks = new List<Book>(); 
+            listOfBooks.Add(new Book(){BookID = 1,BookTitle = "Automic Habits", ISBN = "1234", Price = 10.10M}); 
+            listOfBooks.Add(new Book() { BookID = 2, BookTitle = "How To Write Journal", ISBN = "1234", Price = 20.10M });  
+            modelBuilder.Entity<Book>().HasData(listOfBooks);
         }
     }
 }

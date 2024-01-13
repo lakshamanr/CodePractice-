@@ -22,6 +22,6 @@ namespace DataModel.ModelClass
         [NotMapped]
         public string PriceRange{ get; set; }
 
-        public int BookDetail_ID{ get; set; }
+        public BookDetail BookDetail{ get; set; }
     }
 }

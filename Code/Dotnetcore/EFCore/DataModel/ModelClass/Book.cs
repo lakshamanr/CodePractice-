@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataModel.ModelClass
 {
-    [Table("SGT_BOOK")]
+
     public class Book
     {
         [Key] 

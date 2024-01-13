@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataModel.ModelClass
 {
-    [Table("SGT_GENRE")]
+
     public class Genre
     {
         public int GenreID { get; set; }

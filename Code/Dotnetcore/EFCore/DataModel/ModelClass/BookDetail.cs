@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataModel.ModelClass
 {
@@ -16,5 +12,9 @@ namespace DataModel.ModelClass
         public string NumberOfPager{ get; set; }
 
         public string Weight{ get; set; }
+
+        [ForeignKey("Book")]
+        public int BookID { get; set; }
+        public Book Book { get; set; } 
     }
 }

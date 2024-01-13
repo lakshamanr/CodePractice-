@@ -3,6 +3,7 @@ using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240113231225_AddesNewTableAuthor_Publisher_SubCategory")]
+    partial class AddesNewTableAuthor_Publisher_SubCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,31 +93,6 @@ namespace DataAccess.Migrations
                             ISBN = "1234",
                             Price = 20.10m
                         });
-                });
-
-            modelBuilder.Entity("DataModel.ModelClass.BookDetail", b =>
-                {
-                    b.Property<int>("BookDetail_ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookDetail_ID"), 1L, 1);
-
-                    b.Property<string>("NumberOfChaoer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumberOfPager")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Weight")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("BookDetail_ID");
-
-                    b.ToTable("BookDetails");
                 });
 
             modelBuilder.Entity("DataModel.ModelClass.Genre", b =>

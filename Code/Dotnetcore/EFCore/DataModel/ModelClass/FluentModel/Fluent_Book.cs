@@ -18,5 +18,7 @@ namespace DataModel.ModelClass
         public string PriceRange{ get; set; } 
 
         public Fluent_BookDetail BookDetail{ get; set; }
+        public int Publisher_ID { get; set; }
+        public Fluent_Publisher FluentPublisher{ get; set; }
     }
 }

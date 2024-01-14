@@ -12,7 +12,7 @@ namespace DataModel.ModelClass
          
         public int Publisher_ID { get; set; }
         public string Name { get; set; }
-        public string Location{ get; set; } 
-
+        public string Location{ get; set; }
+        public ICollection<Fluent_Book> FluentBooks{ get; set; }
     }
 }

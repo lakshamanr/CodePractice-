@@ -23,5 +23,7 @@ namespace DataModel.ModelClass
         public string Location { get; set; }
         [NotMapped]
         public string FullName{ get { return FirstName +string.Empty+ LastName; } }
+
+        public List<Book> Books { get; set; }
     }
 }

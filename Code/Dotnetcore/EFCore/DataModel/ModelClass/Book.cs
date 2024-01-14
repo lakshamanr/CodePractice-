@@ -28,5 +28,6 @@ namespace DataModel.ModelClass
         public int Publisher_ID { get; set; }
         public Publisher Publisher{ get; set; }
 
+        public List<Author> Authors { get; set; }
     }
 }

@@ -49,6 +49,10 @@ namespace DataAccess.Data
 
             modelBuilder.Entity<Fluent_Publisher>().HasKey(x => x.Publisher_ID);
 
+            modelBuilder.Entity<Fluent_BookDetail>()
+                    .HasOne(x => x.FluentBook)
+                    .WithOne(x => x.BookDetail)
+                    .HasForeignKey<Fluent_BookDetail>(x => x.BookID);
 
 
             modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);

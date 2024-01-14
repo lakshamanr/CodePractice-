@@ -16,5 +16,7 @@ namespace DataModel.ModelClass
         public string ISBN { get; set; }
         public decimal Price { get; set; }  
         public string PriceRange{ get; set; } 
+
+        public Fluent_BookDetail BookDetail{ get; set; }
     }
 }

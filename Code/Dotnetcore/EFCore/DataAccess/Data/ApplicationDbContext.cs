@@ -18,6 +18,7 @@ namespace DataAccess.Data
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<AuthorBookMap> AuthorBookMap { get; set; }
 
+        public DbSet<Fluent_BookDetail> FluentBooks { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=SAGITEC-0099\\SQLEXPRESS;Database=CodingPractice;TrustServerCertificate=True;Trusted_Connection=True");
@@ -38,6 +39,11 @@ namespace DataAccess.Data
             lstPublisher.Add(new Publisher() {Publisher_ID = 1,Location = "Pune",Name = "ABC"});
             lstPublisher.Add(new Publisher(){Publisher_ID = 2, Location = "Ambe",Name = "MNO"});
             modelBuilder.Entity<Publisher>().HasData(lstPublisher);
+
+
+            modelBuilder.Entity<Fluent_BookDetail>().ToTable("Fluent_BookDetails");
+            modelBuilder.Entity<Fluent_BookDetail>().Property(p => p.NumberOfChaoer).HasColumnName("Chapter");
+            modelBuilder.Entity<Fluent_BookDetail>().HasKey(x => x.BookDetail_ID);
         }
     }
 }

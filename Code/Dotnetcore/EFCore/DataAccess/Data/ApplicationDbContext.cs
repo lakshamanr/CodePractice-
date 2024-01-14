@@ -26,7 +26,9 @@ namespace DataAccess.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);
+
             modelBuilder.Entity<AuthorBookMap>().HasKey(x => new { x.Author_id,x.BookID});
+
             List<Book> listOfBooks = new List<Book>(); 
             listOfBooks.Add(new Book(){BookID = 1,BookTitle = "Automic Habits", ISBN = "1234", Price = 10.10M,Publisher_ID = 1}); 
             listOfBooks.Add(new Book() { BookID = 2, BookTitle = "How To Write Journal", ISBN = "1234", Price = 20.10M, Publisher_ID = 2});  

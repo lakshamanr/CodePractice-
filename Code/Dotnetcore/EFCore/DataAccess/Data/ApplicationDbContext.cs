@@ -25,6 +25,7 @@ namespace DataAccess.Data
 
         public DbSet<Fluent_Publisher> FluentPublishers{ get; set; }
 
+        public DbSet<Fluent_AuthorBookMap> FluentAuthorBookMap { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=SAGITEC-0099\\SQLEXPRESS;Database=CodingPractice;TrustServerCertificate=True;Trusted_Connection=True");
@@ -39,7 +40,7 @@ namespace DataAccess.Data
                                                 .HasMaxLength(50);
 
 
-            modelBuilder.Entity<Fluent_BookDetail>().ToTable("Fluent_BookDetails");
+            modelBuilder.Entity<Fluent_BookDetail>().ToTable("FluentBookDetails");
             modelBuilder.Entity<Fluent_BookDetail>().Property(p => p.NumberOfChaoer).HasColumnName("Chapter");
             modelBuilder.Entity<Fluent_BookDetail>().HasKey(x => x.BookDetail_ID);
 
@@ -57,6 +58,21 @@ namespace DataAccess.Data
                     .HasOne(x => x.FluentBook)
                     .WithOne(x => x.BookDetail)
                     .HasForeignKey<Fluent_BookDetail>(x => x.BookID);
+
+
+
+
+
+            modelBuilder.Entity<Fluent_AuthorBookMap>().HasKey(x => new {x.BookID,x.Author_id });
+            modelBuilder.Entity<Fluent_AuthorBookMap>()
+                .HasOne(x => x.Author)
+                .WithMany(x => x.BookAuthorMap)
+                .HasForeignKey(x => x.Author_id);
+
+            modelBuilder.Entity<Fluent_AuthorBookMap>()
+                .HasOne(x => x.Book)
+                .WithMany(x => x.BookAuthorMap)
+                .HasForeignKey(x=>x.BookID);
 
 
             modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);

@@ -21,6 +21,9 @@ namespace DataModel.ModelClass
         public string Location { get; set; }
         
         public string FullName{ get { return FirstName +string.Empty+ LastName; } }
- 
+
+        
+        public ICollection<Fluent_AuthorBookMap> BookAuthorMap { get; set; }
+
     }
 }

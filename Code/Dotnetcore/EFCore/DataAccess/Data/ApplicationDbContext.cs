@@ -27,9 +27,14 @@ namespace DataAccess.Data
             modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);
              
             List<Book> listOfBooks = new List<Book>(); 
-            listOfBooks.Add(new Book(){BookID = 1,BookTitle = "Automic Habits", ISBN = "1234", Price = 10.10M}); 
-            listOfBooks.Add(new Book() { BookID = 2, BookTitle = "How To Write Journal", ISBN = "1234", Price = 20.10M });  
+            listOfBooks.Add(new Book(){BookID = 1,BookTitle = "Automic Habits", ISBN = "1234", Price = 10.10M,Publisher_ID = 1}); 
+            listOfBooks.Add(new Book() { BookID = 2, BookTitle = "How To Write Journal", ISBN = "1234", Price = 20.10M, Publisher_ID = 2});  
             modelBuilder.Entity<Book>().HasData(listOfBooks);
+
+            List<Publisher> lstPublisher = new List<Publisher>();
+            lstPublisher.Add(new Publisher() {Publisher_ID = 1,Location = "Pune",Name = "ABC"});
+            lstPublisher.Add(new Publisher(){Publisher_ID = 2, Location = "Ambe",Name = "MNO"});
+            modelBuilder.Entity<Publisher>().HasData(lstPublisher);
         }
     }
 }

@@ -18,7 +18,13 @@ namespace DataAccess.Data
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<AuthorBookMap> AuthorBookMap { get; set; }
 
-        public DbSet<Fluent_BookDetail> FluentBooks { get; set; }
+
+        public DbSet<Fluent_Book> FluentBooks{ get; set; }
+        public DbSet<Fluent_BookDetail> FluentDetailsBooks { get; set; }  
+        public DbSet<Fluent_Author> FluentAuthor { get; set; }
+
+        public DbSet<Fluent_Publisher> FluentPublishers{ get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=SAGITEC-0099\\SQLEXPRESS;Database=CodingPractice;TrustServerCertificate=True;Trusted_Connection=True");
@@ -26,8 +32,26 @@ namespace DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);
+            modelBuilder.Entity<Fluent_Author>().Ignore(x => x.FullName);
+            modelBuilder.Entity<Fluent_Author>().HasKey(x => x.Author_id);
+            modelBuilder.Entity<Fluent_Author>().Property(x => x.FirstName)
+                                                .IsRequired()
+                                                .HasMaxLength(50);
 
+
+            modelBuilder.Entity<Fluent_BookDetail>().ToTable("Fluent_BookDetails");
+            modelBuilder.Entity<Fluent_BookDetail>().Property(p => p.NumberOfChaoer).HasColumnName("Chapter");
+            modelBuilder.Entity<Fluent_BookDetail>().HasKey(x => x.BookDetail_ID);
+
+            modelBuilder.Entity<Fluent_Book>().HasKey(x => x.BookID);
+            modelBuilder.Entity<Fluent_Book>().Ignore(x => x.PriceRange);
+            modelBuilder.Entity<Fluent_Book>().Property(x => x.BookTitle).IsRequired().HasMaxLength(50);
+
+            modelBuilder.Entity<Fluent_Publisher>().HasKey(x => x.Publisher_ID);
+
+
+
+            modelBuilder.Entity<Book>().Property(x => x.Price).HasPrecision(10, 5);
             modelBuilder.Entity<AuthorBookMap>().HasKey(x => new { x.Author_id,x.BookID});
 
             List<Book> listOfBooks = new List<Book>(); 
@@ -40,10 +64,6 @@ namespace DataAccess.Data
             lstPublisher.Add(new Publisher(){Publisher_ID = 2, Location = "Ambe",Name = "MNO"});
             modelBuilder.Entity<Publisher>().HasData(lstPublisher);
 
-
-            modelBuilder.Entity<Fluent_BookDetail>().ToTable("Fluent_BookDetails");
-            modelBuilder.Entity<Fluent_BookDetail>().Property(p => p.NumberOfChaoer).HasColumnName("Chapter");
-            modelBuilder.Entity<Fluent_BookDetail>().HasKey(x => x.BookDetail_ID);
         }
     }
 }

@@ -9,12 +9,10 @@ namespace DataModel.ModelClass
 {
     public class Fluent_Publisher
     {
-        [Key]
+         
         public int Publisher_ID { get; set; }
         public string Name { get; set; }
-        public string Location{ get; set; }
-
-        public List<Fluent_Book> Books{ get; set; }
+        public string Location{ get; set; } 
 
     }
 }

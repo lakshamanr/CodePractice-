@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DataModel.ModelClass;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
 {
-    public class BookController : Controller
+    public class AuthorController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
+        
     }
 }

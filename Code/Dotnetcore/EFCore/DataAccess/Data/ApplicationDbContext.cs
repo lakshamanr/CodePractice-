@@ -44,9 +44,18 @@ namespace DataAccess.Data
 
             modelBuilder.Entity<Category>().HasKey(x => x.CategoryId);
 
+            List<Category> lstCategories = new List<Category>();
+
+            lstCategories.Add(new Category {CategoryId = 1,Name = "category 1" });
+            lstCategories.Add(new Category { CategoryId = 2, Name = "category 2"}) ;
+            lstCategories.Add(new Category { CategoryId = 3, Name = "category 3" });
+
+            modelBuilder.Entity<Category>().HasData(lstCategories);
+
             modelBuilder.ApplyConfiguration(new FluentAuthorConfig());
             modelBuilder.ApplyConfiguration(new FluentBookConfig());
             modelBuilder.ApplyConfiguration(new FluentBookDetailsConfig());
+
 
 
             modelBuilder.Entity<Fluent_Publisher>().HasKey(x => x.Publisher_ID); 

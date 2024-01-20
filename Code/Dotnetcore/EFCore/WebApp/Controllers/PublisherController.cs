@@ -2,7 +2,7 @@
 
 namespace WebApp.Controllers
 {
-    public class BookController : Controller
+    public class PublisherController : Controller
     {
         public IActionResult Index()
         {

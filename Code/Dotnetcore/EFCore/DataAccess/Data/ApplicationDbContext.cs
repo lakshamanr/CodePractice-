@@ -28,29 +28,38 @@ namespace DataAccess.Data
         public DbSet<Fluent_Publisher> FluentPublishers{ get; set; }
 
         public DbSet<Fluent_AuthorBookMap> FluentAuthorBookMap { get; set; }
+        public DbSet<BookView> lBookView{ get; set; }
 
-    
-         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
+        // public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
+        //{
+
+        //}
+        public ApplicationDbContext()
         {
-            
+
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=SAGITEC-0099\\SQLEXPRESS;Database=CodingPractice;TrustServerCertificate=True;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer("Server=SAGITEC-0099\\SQLEXPRESS;Database=CodingPractice;TrustServerCertificate=True;Trusted_Connection=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             modelBuilder.Entity<Category>().HasKey(x => x.CategoryId);
+            modelBuilder.Entity<BookView>().HasNoKey();
+            modelBuilder.Entity<BookView>().ToView("GetBooks");
 
             List<Category> lstCategories = new List<Category>();
 
-            lstCategories.Add(new Category {CategoryId = 1,Name = "category 1" });
-            lstCategories.Add(new Category { CategoryId = 2, Name = "category 2"}) ;
-            lstCategories.Add(new Category { CategoryId = 3, Name = "category 3" });
+            if (lstCategories != null)
+            {
+                lstCategories.Add(new Category { CategoryId = 1, Name = "category 1" });
+                lstCategories.Add(new Category { CategoryId = 2, Name = "category 2" });
+                lstCategories.Add(new Category { CategoryId = 3, Name = "category 3" });
 
-            modelBuilder.Entity<Category>().HasData(lstCategories);
+                modelBuilder.Entity<Category>().HasData(lstCategories);
+            }
 
             modelBuilder.ApplyConfiguration(new FluentAuthorConfig());
             modelBuilder.ApplyConfiguration(new FluentBookConfig());
@@ -77,14 +86,22 @@ namespace DataAccess.Data
 
             List<Book> listOfBooks = new List<Book>();
             listOfBooks.Add(new Book() { BookID = 1, BookTitle = "Automic Habits", ISBN = "1234", Price = 10.10M, Publisher_ID = 1 });
-            listOfBooks.Add(new Book() { BookID = 2, BookTitle = "How To Write Journal", ISBN = "1234", Price = 20.10M, Publisher_ID = 2 });
-            modelBuilder.Entity<Book>().HasData(listOfBooks);
+            if (listOfBooks != null)
+            {
+                listOfBooks.Add(new Book()
+                {
+                    BookID = 2, BookTitle = "How To Write Journal", ISBN = "1234", Price = 20.10M, Publisher_ID = 2
+                });
+                modelBuilder.Entity<Book>().HasData(listOfBooks);
+            }
 
             List<Publisher> lstPublisher = new List<Publisher>();
-            lstPublisher.Add(new Publisher() { Publisher_ID = 1, Location = "Pune", Name = "ABC" });
-            lstPublisher.Add(new Publisher() { Publisher_ID = 2, Location = "Ambe", Name = "MNO" });
-            modelBuilder.Entity<Publisher>().HasData(lstPublisher);
-
+            if (lstPublisher != null)
+            {
+                lstPublisher.Add(new Publisher() { Publisher_ID = 1, Location = "Pune", Name = "ABC" });
+                lstPublisher.Add(new Publisher() { Publisher_ID = 2, Location = "Ambe", Name = "MNO" });
+                modelBuilder.Entity<Publisher>().HasData(lstPublisher);
+            }
         }
     }
 }

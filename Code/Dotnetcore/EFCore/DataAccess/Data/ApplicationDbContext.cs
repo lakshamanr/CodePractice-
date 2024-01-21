@@ -29,6 +29,7 @@ namespace DataAccess.Data
 
         public DbSet<Fluent_AuthorBookMap> FluentAuthorBookMap { get; set; }
         public DbSet<BookView> lBookView{ get; set; }
+ 
 
         // public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         //{
